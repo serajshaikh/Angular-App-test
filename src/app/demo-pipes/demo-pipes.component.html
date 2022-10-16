@@ -1,0 +1,25 @@
+<p>demo-pipes works!</p>
+<h1>{{title|uppercase}}</h1>
+<h1>{{title|lowercase}}</h1>
+<h1>{{today}}</h1>
+<h1>{{today|date}}</h1>
+<h1>{{today|date:"dd/MM/yyyy"}}</h1>
+<h1>{{today|date:"dd/MM/yyyy hh:mm:ss"}}</h1>
+<h1>{{today|date:"fullDate"}}</h1>
+
+<!-- chaining pipes -->
+<h1>{{today|date:"fullDate"|uppercase}}</h1>
+
+<!-- accessing user object data -->
+<h1>
+    <span>{{user.id}}</span> <br>
+    <span>{{user.name|uppercase}}</span> <br>
+    <span>{{user.dob|date:"fullDate"}}</span> <br>
+    <span>{{user.salary|currency:"INR"}}</span>
+  
+</h1>
+
+
+
+<h1> <<<<<<------------custom pipe--------------->>>>>>></h1>
+<h1>{{user.name|custompipe:user.name}}</h1>
